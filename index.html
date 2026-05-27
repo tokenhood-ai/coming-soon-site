@@ -16,7 +16,8 @@
       --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
       --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
       --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-2xl: clamp(1.75rem, 1.2rem + 1.875vw, 2.875rem);
+      --text-3xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
       --space-1: 0.25rem;
       --space-2: 0.5rem;
       --space-3: 0.75rem;
@@ -251,10 +252,22 @@
 
     h1 {
       font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: var(--font-display);
       font-size: var(--text-2xl);
       line-height: 0.95;
       letter-spacing: -0.05em;
       text-transform: uppercase;
+    }
+
+    h2 + h1 {
+      margin-top: -1rem;
     }
 
     .ghost {
@@ -403,10 +416,10 @@
 
       <main id="content">
         <div class="hero">
-          <h1>
+          <h2>
             Know how many tokens you're paying for.
-            <span class="ghost">a fair <a class="buzzword">AI</a> subscription.</span>
-          </h1>
+          </h2>
+          <h1><span class="ghost">A fair <a class="buzzword">AI</a> subscription.</span></h1>
           <p class="subcopy">No "20x", "5x", time-windows, or other tricks to limit your usage. Pinky promise.</p>
         </div>
 
